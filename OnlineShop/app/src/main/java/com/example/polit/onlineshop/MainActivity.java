@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Iterable<DataSnapshot> products = dataSnapshot.child("products").getChildren();
+                System.out.println("Let's see if it works...");
 
                 for (DataSnapshot product : products) {
                     Mobile mobile = product.getValue(Mobile.class);
